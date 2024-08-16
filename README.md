@@ -1,5 +1,6 @@
 
 **POST FIX:**
+
 If operand - add to postfix
 
 If left paranthesis - add to stack
