@@ -36,8 +36,8 @@ void display(){
 }
 
 int main() {
- int c=1;
- while(c!=4){
+ int c;
+ do{
   printf("Enter '1' for push \n");
   printf("Enter '2' for pop\n");
   printf("Enter '3' for display \n");
@@ -59,5 +59,5 @@ int main() {
   if(c == 3){
       display();
   }
- }
+ }while(c!=4);
 }
