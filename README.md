@@ -1,20 +1,20 @@
-### STACK(/+-+-Allen-+-+/+_+_Progs/Data Structures/Stack)
+### STACK
 * Push
 * Pop
 * Display
 
-### [QUEUE](/+-+-Allen-+-+/+_+_Progs/Data Structures/Queue)
+### QUEUE
 * Enqueue
 * Dequeue
 * Display
 
-### [POST FIX](/+-+-Allen-+-+/+_+_Progs/Data Structures/Post fix)
+### POST FIX
 * If operand - add to postfix
 * If left paranthesis - add to stack
 * If right paranthesis - pop and add to postfix all operators till left paranthesis
 * Operator - pop and add to postfix those operators that have precendence greater than or equal to the scanned operator
 
-### [SINGLE LIKED LIST](/+-+-Allen-+-+/+_+_Progs/Data Structures/Linked Lists/Single Linked List)
+### SINGLE LIKED LIST
  (Using java):
 * Node class -> data & Node reference to the next node
 * 
