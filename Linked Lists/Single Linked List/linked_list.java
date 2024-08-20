@@ -14,7 +14,7 @@ public class linked_list {
     public Node head = null;
     public Node tail = null;
 
-    public void addNode(int data){ //TO ADD NEW NODE
+    public void addNode(int data){ //TO ADD A NEW NODE
         Node newNode = new Node(data);
 
         if(head == null){
@@ -25,6 +25,32 @@ public class linked_list {
         tail = newNode;
         System.out.println("Element is added\n");
     }
+
+    public void addNodeBetween(int nextTo, int data){ //TO ADD A NEW NODE BETWEEN TO NODES
+        Node newNode = new Node(data);
+        Node temp = head;
+
+        while(temp != null && temp.data != nextTo){
+            temp = temp.next;
+        }
+
+        if(temp == null){
+            System.out.println("Positon not found\n");
+            return;
+        }
+
+        if(temp == tail){
+            tail.next = newNode;
+            tail = newNode;
+            System.out.println("Element is added\n");
+            return;
+        }
+
+        newNode.next = temp.next;
+        temp.next = newNode;
+        System.out.println("Element is added\n");
+
+    }    
 
 
     public void delete(int data){ //TO DELETE A NUMBER
@@ -76,9 +102,10 @@ public class linked_list {
         int c;
         do{
             System.out.println("Enter 1 to Add an element");
-            System.out.println("Enter 2 to Delete an element");
-            System.out.println("Enter 3 to Display");
-            System.out.println("Enter 4 to Exit");
+            System.out.println("Enter 2 to Add an element between to element");
+            System.out.println("Enter 3 to Delete an element");
+            System.out.println("Enter 4 to Display");
+            System.out.println("Enter 5 to Exit");
             System.out.print("Enter ur choice :");
             c= sc.nextInt();
 
@@ -90,17 +117,27 @@ public class linked_list {
             }
 
             if(c == 2){
+                int p, n;
+                System.out.print("Enter the value after which the element should be added : ");
+                p = sc.nextInt();
+                System.out.print("Enter a no which is to be added : ");
+                n = sc.nextInt();
+                list.addNodeBetween(p,n);
+            } 
+
+            if(c == 3){
                 int n;
                 System.out.print("Enter an elemet to delete : ");
                 n = sc.nextInt();
                 list.delete(n);
             }
 
-            if(c == 3){
+            if(c == 4){
                 list.display();
                 System.out. println();
             }
-        }while(c != 4);
+        }while(c != 5);
+        System.out.println("Quiting!!!");
         sc.close();
     }
 }
