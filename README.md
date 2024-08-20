@@ -17,18 +17,13 @@
 ### (Using java):
 * Node class -> data & Node reference to the next node
 
-        ---------------
+        +------+------+
         | DATA | NEXT |
-        ---------------
+        +------+------+
 
 * 
     - head = first node
-    - tail = last node
-
-        +-------------+      +------------+      +-------------+
-        | DATA | NEXT |----->|DATA | NEXT |----->| DATA | NEXT |
-        +-------------+      +------------+      +-------------+     
-         
+    - tail = last node   
 
 * 
     - addNode() : adds a new node with the given data to the end of the list.
@@ -38,4 +33,8 @@
 
 ## **DOUBLY LIKED LIST**
 ### (Using java):
-* Node class -> -prev
+* Node class -> data, Node reference to the next node, Node reference to the previous node
+
+        +------+------+------+
+        | PREV | DATA | NEXT |
+        +------+------+------+
