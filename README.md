@@ -1,21 +1,20 @@
-### STACK
+## **STACK** 
 * Push
 * Pop
 * Display
 
-### QUEUE
+## **QUEUE**
 * Enqueue
 * Dequeue
 * Display
-
-### POST FIX
+## **POST FIX**
 * If operand - add to postfix
 * If left paranthesis - add to stack
 * If right paranthesis - pop and add to postfix all operators till left paranthesis
 * Operator - pop and add to postfix those operators that have precendence greater than or equal to the scanned operator
 
-### SINGLE LIKED LIST
- (Using java):
+## **SINGLE LIKED LIST**
+### (Using java):
 * Node class -> data & Node reference to the next node
 * 
     - head = first node
