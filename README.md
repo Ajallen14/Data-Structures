@@ -16,9 +16,19 @@
 ## **SINGLE LIKED LIST**
 ### (Using java):
 * Node class -> data & Node reference to the next node
+
+        ---------------
+        | DATA | NEXT |
+        ---------------
+
 * 
     - head = first node
     - tail = last node
+
+         -------------        ------------        -------------
+        | DATA | NEXT |----->|DATA | NEXT |----->| DATA | NEXT |
+         -------------        ------------        -------------
+         
 
 * 
     - addNode() : adds a new node with the given data to the end of the list.
@@ -28,3 +38,4 @@
 
 ## **DOUBLY LIKED LIST**
 ### (Using java):
+* Node class -> -prev
