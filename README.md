@@ -32,6 +32,9 @@
     - delete(): deletes the node with the given data from the list.
     - display(): prints the elements of the list.
 
+### (Using C):
+*
+
 ## **DOUBLY LIKED LIST**
 ### (Using java):
 * Node class -> data, Node reference to the next node, Node reference to the previous node
@@ -39,3 +42,7 @@
         +------+------+------+
         | PREV | DATA | NEXT |
         +------+------+------+
+
+
+### (Using C):
+*
