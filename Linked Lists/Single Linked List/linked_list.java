@@ -26,7 +26,7 @@ public class linked_list {
         System.out.println("Element is added\n");
     }
 
-    public void addNodeBetween(int nextTo, int data){ //TO ADD A NEW NODE BETWEEN TO NODES
+    public void addNodeAfter(int nextTo, int data){ //TO ADD A NEW NODE BETWEEN TO NODES
         Node newNode = new Node(data);
         Node temp = head;
 
@@ -118,11 +118,11 @@ public class linked_list {
 
             if(c == 2){
                 int p, n;
-                System.out.print("Enter the value after which the element should be added : ");
+                System.out.print("Enter the element after which the new element should be added : ");
                 p = sc.nextInt();
                 System.out.print("Enter a no which is to be added : ");
                 n = sc.nextInt();
-                list.addNodeBetween(p,n);
+                list.addNodeAfter(p,n);
             } 
 
             if(c == 3){
