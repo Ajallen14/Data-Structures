@@ -25,3 +25,6 @@
     - addNodeAfter() : adds a new node with the given data after a node.
     - delete(): deletes the node with the given data from the list.
     - display(): prints the elements of the list.
+
+## **DOUBLY LIKED LIST**
+### (Using java):
