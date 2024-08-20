@@ -14,7 +14,7 @@
 * Operator - pop and add to postfix those operators that have precendence greater than or equal to the scanned operator
 
 ## **SINGLE LIKED LIST**
-#### (Using java):
+### (Using java):
 * Node class -> data & Node reference to the next node
 * 
     - head = first node
