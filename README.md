@@ -25,6 +25,7 @@
     - head = first node
     - tail = last node   
 
+
 * 
     - addNode() : adds a new node with the given data to the end of the list.
     - addNodeAfter() : adds a new node with the given data after a node.
