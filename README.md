@@ -17,8 +17,11 @@ POST FIX :
 SINGLE LIKED LIST:
 (Using java):
 * Node class -> data & Node reference to the next node
-* head = first node
-  tail = 2nd node
-* addNode() : adds a new node with the given data to the end of the list.
-  delete(): deletes the node with the given data from the list.
-  display(): prints the elements of the list.
+* 
+    - head = first node
+    - tail = 2nd node
+
+* 
+    - addNode() : adds a new node with the given data to the end of the list.
+    - delete(): deletes the node with the given data from the list.
+    - display(): prints the elements of the list.
