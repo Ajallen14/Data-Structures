@@ -1,10 +1,24 @@
 ## [**STACK**](https://github.com/Ajallen14/Data-Structures/blob/master/Stack/stack.c)
+A stack is a fundamental data structure in computer science that follows the *Last-In-First-Out (LIFO)* principle. It's a collection of elements that are added and removed from the top of the stack.
+
+
+**Main operations** :
 * Push
 * Pop
 * Display
 
+        +---+---+---+---+
+        | 5 | 6 | 7 |   |  => Push
+        +---+---+---+---+
+          f       r
+
+        +---+---+---+---+
+        | 5 | 6 |   |   |  => Pop
+        +---+---+---+---+
+          f   r    
+
 ## [**QUEUE**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/queue.c)
-A queue is a fundamental data structure in computer science that follows the First-In-First-Out (FIFO) principle. It's a linear collection of elements, where elements are added and removed in a specific order
+A queue is a fundamental data structure in computer science that follows the *First-In-First-Out (FIFO)* principle. It's a linear collection of elements, where elements are added and removed in a specific order
 
 **Main operations** :
 * Enqueue
