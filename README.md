@@ -4,6 +4,9 @@
 * Display
 
 ## [**QUEUE**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/queue.c)
+A queue is a fundamental data structure in computer science that follows the First-In-First-Out (FIFO) principle. It's a linear collection of elements, where elements are added and removed in a specific order
+
+**Main operations** :
 * Enqueue
 * Dequeue
 * Display
