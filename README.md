@@ -7,6 +7,17 @@
 * Enqueue
 * Dequeue
 * Display
+### [**Circular Queue**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/circular_queue.c)
+A circular queue is a type of data structure that follows the FIFO (First-In-First-Out) principle, where the last element is connected to the first element to form a circle
+
+**Advantages**:
+- Efficient Use of Space: Circular queues can be implemented using a fixed-size array, making them more memory-efficient.
+- Faster Operations: Enqueue and dequeue operations are faster in circular queues compared to linear queues.
+
+**Disadvantages**:
+- Complex Implementation: Circular queues are more challenging to implement than linear queues.
+- Risk of Overwriting: If not implemented correctly, there is a risk of overwriting the front element when the queue is full.
+
 ## [**POST FIX**](https://github.com/Ajallen14/Data-Structures/blob/master/Post%20fix/post_fix.c)
 * If operand - add to postfix
 * If left paranthesis - add to stack
