@@ -10,6 +10,15 @@ A queue is a fundamental data structure in computer science that follows the Fir
 * Enqueue
 * Dequeue
 * Display
+
+        +---+---+---+---+
+        | 5 | 6 | 7 |   |  => Enqueue
+        +---+---+---+---+
+
+        +---+---+---+---+
+        |   | 6 | 7 |   |  => Dequeue
+        +---+---+---+---+ 
+
 ### [**Circular Queue**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/circular_queue.c)
 A circular queue is a type of data structure that follows the FIFO (First-In-First-Out) principle, where the last element is connected to the first element to form a circle
 
