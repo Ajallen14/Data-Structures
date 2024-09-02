@@ -119,3 +119,23 @@ A circular queue is a type of data structure that follows the FIFO (First-In-Fir
 * S3 : If the exponent of p2 is greater, copy the term from p2 to p3.
 
 * S4 : Repeat steps 1-3 until all terms from both polynomials have been processed.
+
+
+       P1                P2               P3
+      +---+             +---+           +---+ 
+      | 5 |             | 4 |           | 5 | 
+      +   +             +   +           +   + 
+      | 3 |             | 2 |           | 3 | 
+      +---+             +---+           +---+ 
+      | 3 |             | 9 |           | 7 | 
+      +   +             +   +           +   + 
+      | 2 |             | 0 |           | 2 | 
+      +---+             +---+           +---+ 
+      | 4 |                             | 4 | 
+      +   +                             +   + 
+      | 1 |                             | 1 | 
+      +---+                             +---+ 
+                                        | 9 |
+                                        +   +
+                                        | 0 |
+                                        +---+  
