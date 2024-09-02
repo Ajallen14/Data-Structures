@@ -100,3 +100,22 @@ A circular queue is a type of data structure that follows the FIFO (First-In-Fir
 
 ### (Using C):
 *
+
+
+## [**POLYNOMIAL ADDITION**](https://github.com/Ajallen14/Data-Structures/blob/master/Polynomial%20Addition/Poly_add.c)
+
+* **readPolynomial(Poly *p)**: Reads a polynomial from the user, including the number of terms, coefficients, and exponents.
+
+* **addPolynomial(Poly *p1, Poly *p2, Poly *p3, int term1, int term2)**: Adds two polynomials p1 and p2 and stores the result in p3.
+
+* **displayPolynomial(Poly *p, int terms)**: Displays a polynomial in the format (coefficient)x^(exponent) + ...
+
+### Working
+
+* S1 : Compare the exponents of the current terms in p1 and p2. If they are equal, add the coefficients and store the result in p3.
+
+* S2 : If the exponent of p1 is greater, copy the term from p1 to p3.
+
+* S3 : If the exponent of p2 is greater, copy the term from p2 to p3.
+
+* S4 : Repeat steps 1-3 until all terms from both polynomials have been processed.
