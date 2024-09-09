@@ -61,6 +61,11 @@ A circular queue is a type of data structure that follows the FIFO (First-In-Fir
 - Complex Implementation: Circular queues are more challenging to implement than linear queues.
 - Risk of Overwriting: If not implemented correctly, there is a risk of overwriting the front element when the queue is full.
 
+### [**Priority Queue**]()
+
+
+### [**Deque (Double Ended Queue)**]()
+
 ## [**POST FIX**](https://github.com/Ajallen14/Data-Structures/blob/master/Post%20fix/post_fix.c)
 * If operand - add to postfix
 * If left paranthesis - add to stack

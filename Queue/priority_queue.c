@@ -1,110 +1,123 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct {
-    int data;
+struct Node {
     int priority;
-} Element;
+    int data;
+    struct Node *next;
+};
 
-typedef struct {
-    Element *array;
-    int size;
-    int capacity;
-} PriorityQueue;
+struct Node *front;
 
-PriorityQueue* createPriorityQueue(int capacity) {
-    PriorityQueue* queue = (PriorityQueue*) malloc(sizeof(PriorityQueue));
-    queue->array = (Element*) malloc(sizeof(Element) * capacity);
-    queue->size = 0;
-    queue->capacity = capacity;
-    return queue;
+void initializeQueue() {
+    front = NULL;
 }
 
-int isEmpty(PriorityQueue* queue) {
-    return queue->size == 0;
+int isEmpty() {
+    if (front == NULL) {
+        return 1;
+    }
+
+    return 0;
 }
 
-int isFull(PriorityQueue* queue) {
-    return queue->size == queue->capacity;
-}
+void insert(int element, int priority) {
+    struct Node *temp, *p;
 
-void enqueue(PriorityQueue* queue, int data, int priority) {
-    if (isFull(queue)) {
-        printf("Queue is full\n");
+    temp = (struct Node *)malloc(sizeof(struct Node));
+
+    if (temp == NULL) {
+        printf("Queue\n");
         return;
     }
 
-    Element newElement;
-    newElement.data = data;
-    newElement.priority = priority;
+    temp->data = element;
+    temp->priority = priority;
 
-    for (int i = queue->size; i > 0; i--) {
-        if (queue->array[i - 1].priority < priority) {
-            queue->array[i] = queue->array[i - 1];
-        } else {
-            break;
+    if (isEmpty() || priority < front->priority) {
+        temp->next = front;
+        front = temp;
+    }
+
+    else {
+        p = front;
+
+        while (p->next != NULL && p->next->priority <= priority) {
+            p = p->next;
+        }
+
+        temp->next = p->next;
+        p->next = temp;
+    }
+}
+
+void display() {
+    if (isEmpty()) {
+        printf("Empty Queue!\n");
+        return;
+    }
+
+    else {
+        struct Node *ptr = front;
+
+        printf("Queue is: \n");
+        printf("Priority     Data\n");
+
+        while (ptr != NULL) {
+            printf("%d             %d\n", ptr->priority, ptr->data);
+            ptr = ptr->next;
         }
     }
-
-    queue->array[queue->size] = newElement;
-    queue->size++;
 }
 
-void dequeue(PriorityQueue* queue) {
-    if (isEmpty(queue)) {
-        printf("Queue is empty\n");
+void delete() {
+    struct Node *temp;
+    int data;
+
+    if (isEmpty()) {
+        printf("Queue is Empty\n");
         return;
     }
 
-    for (int i = 0; i < queue->size - 1; i++) {
-        queue->array[i] = queue->array[i + 1];
+    else {
+        temp = front;
+        data = temp->data;
+        front = front->next;
+        free(temp);
     }
-
-    queue->size--;
-    printf("Element is removed");
-}
-
-
-void display(PriorityQueue* queue) {
-    for (int i = 0; i < queue->size; i++) {
-        printf("Data: %d, Priority: %d\n", queue->array[i].data, queue->array[i].priority);
-    }
+    printf("Element removed");
 }
 
 int main() {
-    int s;
-    printf("Size of the queue :");
-    scanf("%d", &s);
-    PriorityQueue* queue = createPriorityQueue(s);
+    int n, data, prior;
 
-	int c;
-	do{
-		printf("Enter 1 for Enqueue \n");
-		printf("Enter 2 for Dequeue \n");
-		printf("Enter 3 for Display \n");
-		printf("Enter 4 for Exit \n");
-		printf("Enter ur choice : ");
-		scanf("%d", &c);
-		
-		if(c==1){
-			int data, pri;
-			printf("Enter a no :");
-			scanf("%d", &data);
-            printf("enter the priority");
-            scanf("%d", &pri);
-			enqueue(queue, data, pri);
+    int c;
+    initializeQueue();
+    do
+    {
+        printf("Enter 1 for Enqueue\n");
+        printf("Enter 2 for Dequeue\n");
+        printf("Enter 3 for Display\n");
+        printf("Enter 4 for exit\n");
+        printf("Enter ur choice :");
+        scanf("%d", &c);
+        if(c==1){
+            int a;
+            printf("Enter the data : ");
+            scanf("%d", &data);
+            printf("Enter the priority :");
+            scanf("%d", &prior);
+            insert(data, prior);
             printf("\n");
-		}
-		
-		if(c==2){
-			dequeue(queue);
+        }
+        if(c==2){
+            delete();
             printf("\n");
-		}
-		
-		if(c==3){
-			display(queue);
+        }
+        if(c==3){
+            display();
             printf("\n");
-		}
-	}while(c!=4);
+        }
+    }while (c!=4);
     printf("Quitting...");
 }
