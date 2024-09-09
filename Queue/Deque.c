@@ -5,62 +5,6 @@
 
 int array[MAX], front, rear;
 
-void initializeQueue();
-int isEmpty();
-int isFull();
-void insertFront(int x);
-void insertRear(int x);
-int deleteFront();
-int deleteRear();
-void display();
-
-int main() {
-    int n;
-
-    initializeQueue();
-
-    int c;
-    float c_c;
-    do
-    {
-        printf("Enter 1 for Enqueue\n");
-        printf("Enter 2 for Dequeue\n");
-        printf("Enter 3 for Display\n");
-        printf("Enter 4 for exit\n");
-        printf("Enter ur choice : ");
-        scanf("%d", &c);
-        if(c==1){
-            printf("Enter 1.1 for insertion at front\n");
-            printf("Enter 1.2 for insertion at rear\n");
-            printf("Enter ur choice : ");
-            scanf("%f", &c_c);
-            if(c_c == 1.1){
-                printf("Enter the element to push: ");
-                scanf("%d", &n);
-                insertFront(n);
-            }if(c_c == 1.2){
-                printf("Enter the element to push: ");
-                scanf("%d", &n);
-                insertFront(n);
-            }
-        }
-        if(c==2){
-            printf("Enter 2.1 for deletion at front\n");
-            printf("Enter 2.2 for deletion at rear\n");
-            printf("Enter ur choice : ");
-            scanf("%f", &c_c);
-            if(c_c == 1.1){
-                deleteFront();
-            }if(c_c == 1.2){
-                deleteRear();
-            }
-        }
-        if(c==3){
-            display();
-        }
-    }while (c!=4);
-}
-
 void initializeQueue() {
     front = rear = -1;
 }
@@ -83,7 +27,7 @@ int isFull() {
 
 void insertFront(int x) {
     if (isFull()) {
-        printf("Queue Overflow!\n");
+        printf("Queue is full\n");
         return;
     }
 
@@ -93,9 +37,7 @@ void insertFront(int x) {
 
     else if (front == 0) {
         front = MAX-1;
-    }
-
-    else {
+    }else {
         front = front - 1;
     }
 
@@ -104,7 +46,7 @@ void insertFront(int x) {
 
 void insertRear(int x) {
     if (isFull()) {
-        printf("Queue Overflow!\n");
+        printf("Queue is full\n");
         return;
     }
 
@@ -114,9 +56,7 @@ void insertRear(int x) {
 
     if (rear == MAX-1) {
         rear = 0;
-    }
-
-    else {
+    }else {
         rear += 1;
     }
 
@@ -127,7 +67,7 @@ int deleteFront() {
     int x;
 
     if (isEmpty()) {
-        printf("Queue Underflow!\n");
+        printf("Queue is empty\n");
         exit(1);
     }
 
@@ -139,12 +79,11 @@ int deleteFront() {
 
    else if (front == MAX-1) {
     front = 0;
-   }
 
-   else {
+   }else {
     front += 1;
-   }
 
+   }
    return x;
 }
 
@@ -152,7 +91,7 @@ int deleteRear() {
     int x;
 
     if (isEmpty()) {
-        printf("Queue Underflow!\n");
+        printf("Queue empty\n");
         exit(1);
     }
 
@@ -175,7 +114,7 @@ int deleteRear() {
 
 void display() {
     if (isEmpty()) {
-        printf("Empty Queue!\n");
+        printf("Queue is empty\n");
         return;
     }
 
@@ -202,4 +141,57 @@ void display() {
     }
 
     printf("\n");
+}
+
+int main() {
+    int n;
+
+    initializeQueue();
+
+    int c;
+    float cc;
+    do
+    {
+        printf("Enter 1 for Enqueue\n");
+        printf("Enter 2 for Dequeue\n");
+        printf("Enter 3 for Display\n");
+        printf("Enter 4 for exit\n");
+        printf("Enter ur choice : ");
+        scanf("%d", &c);
+        if(c==1){
+            printf("Enter 1.1 for insertion at front\n");
+            printf("Enter 1.2 for insertion at rear\n");
+            printf("Enter ur choice : ");
+            scanf("%f", &cc);
+            if(cc == 1.1){
+                printf("Enter an element ");
+                scanf("%d", &n);
+                insertFront(n);
+                printf("\n");
+            }if(cc == 1.2){
+                printf("Enter an element ");
+                scanf("%d", &n);
+                insertRear(n);
+                printf("\n");
+            }
+        }
+        if(c==2){
+            printf("Enter 2.1 for deletion at front\n");
+            printf("Enter 2.2 for deletion at rear\n");
+            printf("Enter ur choice : ");
+            scanf("%f", &cc);
+            if(cc == 1.1){
+                deleteFront();
+                printf("\n");
+            }if(cc == 1.2){
+                deleteRear();
+                printf("\n");
+            }
+        }
+        if(c==3){
+            display();
+            printf("\n");
+        }
+    }while (c!=4);
+    printf("Quiting....");
 }
