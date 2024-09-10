@@ -69,6 +69,11 @@ key characteristics of a priority queue:
 * **Higher priority elements are served first**: When an element is added to the queue, it is placed in the correct position based on its priority, so that higher priority elements are always served before lower priority elements
 * **FIFO order within priority levels**: Within each priority level, elements are served in the order they were added to the queue (First-In-First-Out)
 
+        +----------+------++------+
+        | PRIORITY | DATA |  NEXT |
+        +----------+------++------+
+        (According to linked list concept)
+
 
 ### [**Deque (Double Ended Queue)**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
 
