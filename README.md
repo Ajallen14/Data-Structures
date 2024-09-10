@@ -61,10 +61,18 @@ A circular queue is a type of data structure that follows the FIFO (First-In-Fir
 - Complex Implementation: Circular queues are more challenging to implement than linear queues.
 - Risk of Overwriting: If not implemented correctly, there is a risk of overwriting the front element when the queue is full.
 
-### [**Priority Queue**]()
+### [**Priority Queue**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/priority_queue.c)
+A priority queue is a type of queue data structure that allows elements to be assigned a priority, and elements with higher priority are served before elements with lower priority.
+
+key characteristics of a priority queue:
+* **Elements are ordered by priority**: Each element in the queue has a priority associated with it, which determines the order in which elements are served
+* **Higher priority elements are served first**: When an element is added to the queue, it is placed in the correct position based on its priority, so that higher priority elements are always served before lower priority elements
+* **FIFO order within priority levels**: Within each priority level, elements are served in the order they were added to the queue (First-In-First-Out)
 
 
-### [**Deque (Double Ended Queue)**]()
+### [**Deque (Double Ended Queue)**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
+
+
 
 ## [**POST FIX**](https://github.com/Ajallen14/Data-Structures/blob/master/Post%20fix/post_fix.c)
 * If operand - add to postfix
