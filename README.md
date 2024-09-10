@@ -76,7 +76,32 @@ key characteristics of a priority queue:
 
 
 ### [**Deque (Double Ended Queue)**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
+A Double Ended Queue, also known as a Deque, is a data structure that allows elements to be added or removed from both ends. It's a generalized version of a queue, where elements can be inserted or deleted from either the front or the back.
 
+        +---+---+---+---+
+        | 5 | 6 | 7 |   |
+        +---+---+---+---+
+          f           r
+
+        +---+---+---+---+
+        | 5 | 6 | 7 | 8 |  => Enqueue at rear
+        +---+---+---+---+
+          f           r
+
+        +---+---+---+---+
+        |   | 6 | 7 | 8 |  => Dequeue at front
+        +---+---+---+---+
+          f           r
+
+        +---+---+---+---+
+        | 9 | 6 | 7 | 8 |  => Enqueue at front
+        +---+---+---+---+
+          f           r
+
+        +---+---+---+---+
+        | 5 | 6 | 7 |   |  => Dequeue at rear
+        +---+---+---+---+
+          f           r
 
 
 ## [**POST FIX**](https://github.com/Ajallen14/Data-Structures/blob/master/Post%20fix/post_fix.c)
