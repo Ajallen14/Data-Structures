@@ -45,7 +45,7 @@ A queue is a fundamental data structure in computer science that follows the *Fi
         +---+---+---+---+ 
               f       r
 
-### [**Circular Queue**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/circular_queue.c)
+### [**CIRCULAR QUEUE**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/circular_queue.c)
 A circular queue is a type of data structure that follows the FIFO (First-In-First-Out) principle, where the last element is connected to the first element to form a circle
 
         +---+---+---+---+
@@ -76,7 +76,7 @@ A circular queue is a type of data structure that follows the FIFO (First-In-Fir
 - Complex Implementation: Circular queues are more challenging to implement than linear queues.
 - Risk of Overwriting: If not implemented correctly, there is a risk of overwriting the front element when the queue is full.
 
-### [**Priority Queue**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/priority_queue.c)
+### [**PRIORITY QUEUE**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/priority_queue.c)
 A priority queue is a type of queue data structure that allows elements to be assigned a priority, and elements with higher priority are served before elements with lower priority.
 
 key characteristics of a priority queue:
@@ -91,7 +91,7 @@ key characteristics of a priority queue:
         (According to linked list concept)
 
 
-### [**Deque (Double Ended Queue)**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
+### [**DEQUE (DOUBLE ENDED QUEUE)**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
 A Double Ended Queue, also known as a Deque, is a data structure that allows elements to be added or removed from both ends. It's a generalized version of a queue, where elements can be inserted or deleted from either the front or the back.
 
         +---+---+---+---+
