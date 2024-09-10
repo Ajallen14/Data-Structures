@@ -8,14 +8,19 @@ A stack is a fundamental data structure in computer science that follows the *La
 * Display
 
         +---+---+---+---+
-        | 5 | 6 | 7 |   |  => Push
+        | 5 | 6 | 7 |   |  
         +---+---+---+---+
           f       r
 
         +---+---+---+---+
-        | 5 | 6 |   |   |  => Pop
+        | 5 | 6 | 7 | 8 |  => Push
         +---+---+---+---+
-          f   r    
+          f           r
+
+        +---+---+---+---+
+        | 5 | 6 | 7 |   |  => Pop
+        +---+---+---+---+
+          f       r    
 
 ## [**QUEUE**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/queue.c)
 A queue is a fundamental data structure in computer science that follows the *First-In-First-Out (FIFO)* principle. It's a linear collection of elements, where elements are added and removed in a specific order
@@ -26,17 +31,27 @@ A queue is a fundamental data structure in computer science that follows the *Fi
 * Display
 
         +---+---+---+---+
-        | 5 | 6 | 7 |   |  => Enqueue
+        | 5 | 6 | 7 |   |  
         +---+---+---+---+
           f       r
 
         +---+---+---+---+
-        |   | 6 | 7 |   |  => Dequeue
+        | 5 | 6 | 7 | 8 |  => Enqueue
+        +---+---+---+---+
+          f           r
+
+        +---+---+---+---+
+        |   | 6 | 7 | 8 |  => Dequeue
         +---+---+---+---+ 
-              f   r
+              f       r
 
 ### [**Circular Queue**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/circular_queue.c)
 A circular queue is a type of data structure that follows the FIFO (First-In-First-Out) principle, where the last element is connected to the first element to form a circle
+
+        +---+---+---+---+
+        | 5 | 6 | 7 |   |  
+        +---+---+---+---+
+          f       r
 
         +---+---+---+---+
         | 5 | 6 | 7 | 8 |  => Enqueue
@@ -69,6 +84,7 @@ key characteristics of a priority queue:
 * **Higher priority elements are served first**: When an element is added to the queue, it is placed in the correct position based on its priority, so that higher priority elements are always served before lower priority elements
 * **FIFO order within priority levels**: Within each priority level, elements are served in the order they were added to the queue (First-In-First-Out)
 
+* Node class -> Priority, data & Node reference to the next node
         +----------+------++------+
         | PRIORITY | DATA |  NEXT |
         +----------+------++------+
@@ -81,7 +97,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
         +---+---+---+---+
         | 5 | 6 | 7 |   |
         +---+---+---+---+
-          f           r
+          f       r
 
         +---+---+---+---+
         | 5 | 6 | 7 | 8 |  => Enqueue at rear
@@ -91,7 +107,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
         +---+---+---+---+
         |   | 6 | 7 | 8 |  => Dequeue at front
         +---+---+---+---+
-          f           r
+              f       r
 
         +---+---+---+---+
         | 9 | 6 | 7 | 8 |  => Enqueue at front
@@ -101,7 +117,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
         +---+---+---+---+
         | 5 | 6 | 7 |   |  => Dequeue at rear
         +---+---+---+---+
-          f           r
+          f       r
 
 
 ## [**POST FIX**](https://github.com/Ajallen14/Data-Structures/blob/master/Post%20fix/post_fix.c)
