@@ -113,6 +113,7 @@ int main() {
             printf("Enter a number: ");
             scanf("%d", &n);
             addNode(&list, n);
+            printf("\n");
         }
 
         if (c == 2) {
@@ -122,6 +123,7 @@ int main() {
             printf("Enter a number which is to be added: ");
             scanf("%d", &n);
             addNodeAfter(&list, p, n);
+            printf("\n");
         }
 
         if (c == 3) {
@@ -129,6 +131,7 @@ int main() {
             printf("Enter an element to delete: ");
             scanf("%d", &n);
             deleteNode(&list, n);
+            printf("\n");
         }
 
         if (c == 4) {
@@ -137,5 +140,4 @@ int main() {
         }
     } while (c != 5);
     printf("Quiting!!!\n");
-    return 0;
 }
