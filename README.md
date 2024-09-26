@@ -64,9 +64,19 @@ A circular queue is a type of data structure that follows the FIFO (First-In-Fir
                f      r
 
         +---+---+---+---+
-        | 9 | 6 | 7 | 8 |  => Enqueue
+        |   |   | 7 | 8 |  => Dequeue
         +---+---+---+---+ 
-          r   f
+                  f   r
+               
+        +---+---+---+---+
+        | 9 |   | 7 | 8 |  => Enqueue
+        +---+---+---+---+ 
+          r       f
+
+        +---+----+---+---+
+        | 9 | 10 | 7 | 8 |  => Enqueue
+        +---+----+---+---+ 
+              r   f
 
 **Advantages**:
 - Efficient Use of Space: Circular queues can be implemented using a fixed-size array, making them more memory-efficient.
