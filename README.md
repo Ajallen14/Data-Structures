@@ -91,7 +91,9 @@ key characteristics of a priority queue:
         (According to linked list concept)
 
 
-### [**DEQUE (DOUBLE ENDED QUEUE)**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
+### **DEQUE (DOUBLE ENDED QUEUE)**
+## [**DEQUE using linked list concept**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque.c)
+## [**DEQUE using array concept**](https://github.com/Ajallen14/Data-Structures/blob/master/Queue/Deque%20(array).c)
 A Double Ended Queue, also known as a Deque, is a data structure that allows elements to be added or removed from both ends. It's a generalized version of a queue, where elements can be inserted or deleted from either the front or the back.
 
         +---+---+---+---+
