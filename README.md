@@ -142,7 +142,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
 * Operator - pop and add to postfix those operators that have precendence greater than or equal to the scanned operator
 
 ## [**SINGLE LIKED LIST**](https://github.com/Ajallen14/Data-Structures/tree/master/Linked%20Lists/Single%20Linked%20List)
-### (Using java):
+### [(Using java)](https://github.com/Ajallen14/Data-Structures/blob/master/Linked%20Lists/Single%20Linked%20List/s_linked_list.java):
 * Node class -> data & Node reference to the next node
 
         +------+------+
@@ -160,8 +160,14 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
     - delete(): deletes the node with the given data from the list.
     - display(): prints the elements of the list.
 
-### (Using C):
-*
+### [(Using C)](https://github.com/Ajallen14/Data-Structures/blob/master/Linked%20Lists/Single%20Linked%20List/s_Linked_list.c):
+
+
+
+
+
+
+
 
 ## [**DOUBLY LIKED LIST**](https://github.com/Ajallen14/Data-Structures/tree/master/Linked%20Lists/Doubly%20Linked%20List)
 ### (Using java):
