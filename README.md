@@ -161,7 +161,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
     - display(): prints the elements of the list.
 
 ### [(Using C)](https://github.com/Ajallen14/Data-Structures/blob/master/Linked%20Lists/Single%20Linked%20List/s_Linked_list.c):
-
+* 
 
 
 
@@ -170,7 +170,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
 
 
 ## [**DOUBLY LIKED LIST**](https://github.com/Ajallen14/Data-Structures/tree/master/Linked%20Lists/Doubly%20Linked%20List)
-### (Using java):
+### [(Using java)](https://github.com/Ajallen14/Data-Structures/blob/master/Linked%20Lists/Doubly%20Linked%20List/d_linked_list.java):
 * Node class -> data, Node reference to the next node, Node reference to the previous node
 
         +------+------+------+
@@ -178,8 +178,13 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
         +------+------+------+
 
 
-### (Using C):
+### [(Using C)](https://github.com/Ajallen14/Data-Structures/blob/master/Linked%20Lists/Doubly%20Linked%20List/d_Linked_list.c):
 *
+
+
+
+
+
 
 
 ## [**POLYNOMIAL ADDITION**](https://github.com/Ajallen14/Data-Structures/blob/master/Polynomial%20Addition/Poly_add.c)
