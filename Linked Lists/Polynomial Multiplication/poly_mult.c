@@ -115,6 +115,6 @@ void main(){
 
     struct Node* head = multiplyPoly(head1, head2);
 
-    printf("Resultant Polynomial :");
+    printf("Resultant Polynomial :\n");
     display(head);
 }
