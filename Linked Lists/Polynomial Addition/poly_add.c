@@ -91,3 +91,20 @@ struct Node* getPoly(){
     }
     return head;
 }
+
+void main(){
+    printf("Enter the 1st Polynomial : \n");
+    struct Node* head1 = getPoly();
+
+    display(head1);
+
+    printf("Enter the 2nd Polynomial : \n");
+    struct Node* head2 = getPoly();
+
+    display(head2);
+
+    struct Node* head = addPoly(head1, head2);
+
+    printf("Resultant Polynomial :");
+    display(head);
+}
