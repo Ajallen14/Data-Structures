@@ -29,7 +29,7 @@ struct Node* addPoly(struct Node* head1, struct Node* head2){
         }else if(cur1->pow > cur2->pow){
             prev->next = cur1;
             prev = cur1;
-            cur1 = cur1->pow;
+            cur1 = cur1->next;
         }else{
             cur1->coeff = cur1->coeff + cur2->coeff;
             prev->next = cur1;
@@ -75,7 +75,7 @@ struct Node* getPoly(){
 
     for(int i = 0; i < n; i++){
         int coeff, pow;
-        printf("Enter the coefficient :");
+        printf("\nEnter the coefficient :");
         scanf("%d", &coeff);
         printf("Enter the exponent :");
         scanf("%d", &pow);
@@ -93,12 +93,12 @@ struct Node* getPoly(){
 }
 
 void main(){
-    printf("Enter the 1st Polynomial : \n");
+    printf("Enter the 1st Polynomial  \n");
     struct Node* head1 = getPoly();
 
     display(head1);
 
-    printf("Enter the 2nd Polynomial : \n");
+    printf("\nEnter the 2nd Polynomial  \n");
     struct Node* head2 = getPoly();
 
     display(head2);
