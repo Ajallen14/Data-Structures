@@ -49,3 +49,19 @@ struct Node* addPoly(struct Node* head1, struct Node* head2){
     
     return temp->next;
 }
+
+void display(struct Node* head){
+    struct Node* cur = head;
+
+    while(cur != NULL){
+        printf("%dx^%d ", cur->coeff, cur->pow);
+        cur = cur->next;
+
+        if(cur != NULL){
+            printf("+ ");
+        }
+    }
+
+    printf("\n");
+}
+
