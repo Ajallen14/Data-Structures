@@ -65,3 +65,29 @@ void display(struct Node* head){
     printf("\n");
 }
 
+struct Node* getPoly(){
+    int n;
+    printf("Enter the no. of terms in the Polynomial: ");
+    scanf("%d", &n);
+
+    struct Node* head = NULL;
+    struct Node* prev = NULL;
+
+    for(int i = 0; i < n; i++){
+        int coeff, pow;
+        printf("Enter the coefficient :");
+        scanf("%d", &coeff);
+        printf("Enter the exponent :");
+        scanf("%d", &pow);
+
+        struct Node* newNode = createNode(coeff, pow);
+
+        if(head == NULL){
+            head = newNode;
+        }else{
+            prev->next = newNode;
+        }
+        prev = newNode;
+    }
+    return head;
+}
