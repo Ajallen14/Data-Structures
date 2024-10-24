@@ -185,7 +185,7 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
 
 
 
-## [**BREADTH FIRST SEARCH AND DEPTH FIRST SEARCH**] ()
+## [**BREADTH FIRST SEARCH AND DEPTH FIRST SEARCH**](https://github.com/Ajallen14/Data-Structures/blob/master/Graph/bfs_and_%20dfs.c)
 
 
 
