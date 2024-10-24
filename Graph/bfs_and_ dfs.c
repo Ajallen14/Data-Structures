@@ -57,7 +57,7 @@ void dfs(){
         k = pop();
         printf("%d\t", k);
         
-        for(i = 0; i < n; j++){
+        for(i = 0; i < n; i++){
             if(a[k][i] == 1 && v[i] == 0){
                 push(i);
                 v[i] = 1;
