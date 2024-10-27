@@ -93,38 +93,57 @@ void postorder(struct Node* root) {
     }
 }
 
-// Main function to demonstrate the binary tree operations
+
 int main() {
     struct Node* root = NULL;
 
-    // Inserting nodes
-    root = insert(root, 50);
-    insert(root, 30);
-    insert(root, 20);
-    insert(root, 40);
-    insert(root, 70);
-    insert(root, 60);
-    insert(root, 80);
+    int r;
+    printf("Enter a root node :");
+    scanf("%d", &r);
+    root = insert(root, r);
+    printf("\n\n");
 
-    // Traversals
-    printf("Inorder traversal: ");
-    inorder(root);
-    printf("\n");
+    int c;
+    do{
+        printf("Enter '1' for Insertion \n");
+        printf("Enter '2' for Deletion\n");
+        printf("Enter '3' for Inorder traversal\n");
+        printf("Enter '4' for Pre order traversal\n");
+        printf("Enter '5' for Post order traversal\n");
+        printf("Enter '6' to Exit\n");
+        printf("Enter ur choice :");
+        scanf("%d", &c);
 
-    printf("Preorder traversal: ");
-    preorder(root);
-    printf("\n");
+        if(c == 1){
+            int a;
+            printf("Enter an element :");
+            scanf("%d", &a);
+            insert(root, a);
+            printf("\n");
+        }
 
-    printf("Postorder traversal: ");
-    postorder(root);
-    printf("\n");
+        if(c == 2){
+           int a ;
+           printf("Enter an element :");
+           scanf("%d", &a);
+           deleteNode(root, abort);
+           printf("\n");
+        } 
 
-    // Deleting a node
-    printf("Deleting 20\n");
-    root = deleteNode(root, 20);
-    printf("Inorder traversal after deletion: ");
-    inorder(root);
-    printf("\n");
+        if(c == 3){
+            inorder(root);
+            printf("\n\n");
+        }
 
-    return 0;
+        if(c == 4){
+            preorder(root);
+            printf("\n\n");
+        }
+
+        if(c == 5){
+            postorder(root);
+            printf("\n\n");
+        }
+    }while(c!=6);
+    printf("Quiting.....");
 }
