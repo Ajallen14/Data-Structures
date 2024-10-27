@@ -98,10 +98,10 @@ int main() {
     struct Node* root = NULL;
 
     int r;
-    printf("Enter a root node :");
+    printf("Enter a root node : ");
     scanf("%d", &r);
     root = insert(root, r);
-    printf("\n\n");
+    printf("\n");
 
     int c;
     do{
@@ -111,12 +111,12 @@ int main() {
         printf("Enter '4' for Pre order traversal\n");
         printf("Enter '5' for Post order traversal\n");
         printf("Enter '6' to Exit\n");
-        printf("Enter ur choice :");
+        printf("Enter ur choice : ");
         scanf("%d", &c);
 
         if(c == 1){
             int a;
-            printf("Enter an element :");
+            printf("Enter an element : ");
             scanf("%d", &a);
             insert(root, a);
             printf("\n");
@@ -124,9 +124,9 @@ int main() {
 
         if(c == 2){
            int a ;
-           printf("Enter an element :");
+           printf("Enter an element : ");
            scanf("%d", &a);
-           deleteNode(root, abort);
+           deleteNode(root, a);
            printf("\n");
         } 
 
