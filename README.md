@@ -184,6 +184,11 @@ A Double Ended Queue, also known as a Deque, is a data structure that allows ele
 
 
 
+## [**BINARY TREE**](https://github.com/Ajallen14/Data-Structures/tree/master/Tree/Tree)
+* [using Linked list](https://github.com/Ajallen14/Data-Structures/blob/master/Tree/Tree/binary_tree(LL).c)
+
+*[using Array](https://github.com/Ajallen14/Data-Structures/blob/master/Tree/Tree/binary_tree(Array).c)
+
 
 ## [**BREADTH FIRST SEARCH AND DEPTH FIRST SEARCH**](https://github.com/Ajallen14/Data-Structures/blob/master/Graph/bfs_and_%20dfs.c)
 
