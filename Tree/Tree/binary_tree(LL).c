@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the structure for a tree node
+
 struct Node {
     int data;
     struct Node* left;
     struct Node* right;
 };
 
-// Function to create a new node
+
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -17,7 +17,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Function to insert a node in the binary tree
 struct Node* insert(struct Node* root, int data) {
     if (root == NULL) {
         return createNode(data);
@@ -30,7 +29,6 @@ struct Node* insert(struct Node* root, int data) {
     return root;
 }
 
-// Function to find the minimum value node in a tree
 struct Node* findMin(struct Node* root) {
     while (root->left != NULL) {
         root = root->left;
@@ -38,7 +36,6 @@ struct Node* findMin(struct Node* root) {
     return root;
 }
 
-// Function to delete a node from the binary tree
 struct Node* deleteNode(struct Node* root, int data) {
     if (root == NULL) {
         return root;
@@ -48,7 +45,6 @@ struct Node* deleteNode(struct Node* root, int data) {
     } else if (data > root->data) {
         root->right = deleteNode(root->right, data);
     } else {
-        // Node with only one child or no child
         if (root->left == NULL) {
             struct Node* temp = root->right;
             free(root);
@@ -58,7 +54,6 @@ struct Node* deleteNode(struct Node* root, int data) {
             free(root);
             return temp;
         }
-        // Node with two children: Get the inorder successor
         struct Node* temp = findMin(root->right);
         root->data = temp->data;
         root->right = deleteNode(root->right, temp->data);
@@ -66,7 +61,7 @@ struct Node* deleteNode(struct Node* root, int data) {
     return root;
 }
 
-// Inorder traversal
+
 void inorder(struct Node* root) {
     if (root != NULL) {
         inorder(root->left);
@@ -75,7 +70,7 @@ void inorder(struct Node* root) {
     }
 }
 
-// Preorder traversal
+
 void preorder(struct Node* root) {
     if (root != NULL) {
         printf("%d ", root->data);
@@ -84,7 +79,7 @@ void preorder(struct Node* root) {
     }
 }
 
-// Postorder traversal
+
 void postorder(struct Node* root) {
     if (root != NULL) {
         postorder(root->left);

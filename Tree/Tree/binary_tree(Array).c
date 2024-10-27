@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 100 // Define maximum size of the array
+#define MAX_SIZE 100 
 
-// Structure to represent the binary tree
 struct BinaryTree {
-    int data[MAX_SIZE]; // Array to hold tree nodes
-    int size;           // Current number of elements in the tree
+    int data[MAX_SIZE]; 
+    int size;
 };
 
-// Function to create a new binary tree
 struct BinaryTree* createBinaryTree() {
     struct BinaryTree* tree = (struct BinaryTree*)malloc(sizeof(struct BinaryTree));
     tree->size = 0;
     return tree;
 }
 
-// Function to insert a node in the binary tree
+
 void insert(struct BinaryTree* tree, int data) {
     if (tree->size >= MAX_SIZE) {
         printf("Tree is full, cannot insert %d\n", data);
@@ -25,51 +23,45 @@ void insert(struct BinaryTree* tree, int data) {
     tree->data[tree->size++] = data; // Insert at the end and increment size
 }
 
-// Function to find the index of a node in the binary tree
 int findIndex(struct BinaryTree* tree, int data) {
     for (int i = 0; i < tree->size; i++) {
         if (tree->data[i] == data) {
             return i;
         }
     }
-    return -1; // Not found
+    return -1;
 }
 
-// Function to delete a node from the binary tree
 void deleteNode(struct BinaryTree* tree, int data) {
     int index = findIndex(tree, data);
     if (index == -1) {
         printf("Node %d not found\n", data);
         return;
     }
-    // Move the last element to the place of the deleted element
     tree->data[index] = tree->data[--tree->size];
 }
 
-// Inorder traversal
 void inorder(struct BinaryTree* tree, int index) {
     if (index < tree->size) {
-        inorder(tree, 2 * index + 1); // Left child
-        printf("%d ", tree->data[index]); // Current node
-        inorder(tree, 2 * index + 2); // Right child
+        inorder(tree, 2 * index + 1); 
+        printf("%d ", tree->data[index]); 
+        inorder(tree, 2 * index + 2); 
     }
 }
 
-// Preorder traversal
 void preorder(struct BinaryTree* tree, int index) {
     if (index < tree->size) {
-        printf("%d ", tree->data[index]); // Current node
-        preorder(tree, 2 * index + 1); // Left child
-        preorder(tree, 2 * index + 2); // Right child
+        printf("%d ", tree->data[index]); 
+        preorder(tree, 2 * index + 1); 
+        preorder(tree, 2 * index + 2); 
     }
 }
 
-// Postorder traversal
 void postorder(struct BinaryTree* tree, int index) {
     if (index < tree->size) {
-        postorder(tree, 2 * index + 1); // Left child
-        postorder(tree, 2 * index + 2); // Right child
-        printf("%d ", tree->data[index]); // Current node
+        postorder(tree, 2 * index + 1); 
+        postorder(tree, 2 * index + 2); 
+        printf("%d ", tree->data[index]); 
     }
 }
 
