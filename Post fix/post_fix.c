@@ -93,16 +93,15 @@ void infixToPostfix(char infix[], char postfix[]) {
 void main(){
     char infix[MAX], postfix[MAX];
 
-    printf("Enter an infix expression : ");
+    printf("Enter an infix expression: ");
     fgets(infix, sizeof(infix), stdin);
 
-    //TO REMOVE NEWLINE CHARACTER FROM THE INPUT STRING
+    // TO REMOVE NEWLINE CHARACTER FROM THE INPUT STRING
     size_t len = strlen(infix);
-    if(len > 0 && infix[len -1] =='\n'){
-        infix[len -1] = '\0';
+    if(len > 0 && infix[len - 1] == '\n'){
+        infix[len - 1] = '\0';
     }
 
     infixToPostfix(infix, postfix);
-    printf("Postfix expression is :\n", postfix);
-
+    printf("Postfix expression is: %s\n", postfix);
 }
