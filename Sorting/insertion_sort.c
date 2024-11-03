@@ -26,10 +26,10 @@ void printArray(int arr[], int n){
 
 int main(){
 	int arr[100],n,i;
-	printf("enter no of elements:");
+	printf("enter no of elements : ");
 	scanf("%d",&n);
+    	printf("enter the elements :- \n");
 	for(i=0;i<n;i++){
-	    printf("enter:");
 	    scanf("%d",&arr[i]);
 	}
 	insertionSort(arr, n);
