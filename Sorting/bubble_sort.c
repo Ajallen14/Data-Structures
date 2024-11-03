@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main(){
     int arr[20],a,i,j,temp;
     printf("number of values u want to input : ");
     scanf("%d",&a);
