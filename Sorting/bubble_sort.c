@@ -3,10 +3,10 @@
 int main()
 {
     int arr[20],a,i,j,temp;
-    printf("number of values u want to input:-");
+    printf("number of values u want to input : ");
     scanf("%d",&a);
     for(i=0;i<a;i++){
-        printf("enter value no %d:-",i+1);
+        printf("enter value no %d : ",i+1);
         scanf("%d",&arr[i]);
     }
     for(i=0;i<a-1;i++){
@@ -16,7 +16,7 @@ int main()
                 arr[j]=arr[j+1];
                 arr[j+1]=temp;   
                 
-            }//printf("%d,",arr[j]);
+            }
         }
     }
     printf("[");
@@ -24,6 +24,4 @@ int main()
         printf("%d,",arr[i]);
     }
     printf("]");
-
-    return 0;
 }
