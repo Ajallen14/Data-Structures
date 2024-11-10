@@ -98,9 +98,11 @@ key characteristics of a priority queue:
 * **FIFO order within priority levels**: Within each priority level, elements are served in the order they were added to the queue (First-In-First-Out)
 
 * Node class -> Priority, data & Node reference to the next node
+
         +----------+------++------+
         | PRIORITY | DATA |  NEXT |
         +----------+------++------+
+
         (According to linked list concept)
 
 
